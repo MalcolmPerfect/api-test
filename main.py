@@ -1,9 +1,8 @@
-"""simple fastapi example"""
+"""simple fastapi example to give fastapi a try, but more importantly
+to then use various testing techniques (unit, integration etc.)"""
 import sqlite3
 import logging
 import uvicorn
-
-# from sqlite3 import Cursor, Connection, connect
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 
@@ -30,9 +29,9 @@ def init_db():
     insert_shapes(seed_data)
 
 
-@app.get("/")
-def root():
-    return {"message": "Hello world"}
+# @app.get("/")
+# def root():
+#     return {"message": "Hello world"}
 
 
 @app.get("/shapes/{shape_id}")
